@@ -3,6 +3,11 @@
 [![License: BSL-1.1](https://img.shields.io/badge/license-BSL--1.1-orange?style=flat-square)](LICENSE)
 [![Patent Pending](https://img.shields.io/badge/patent-pending-red?style=flat-square)]()
 [![θ](https://img.shields.io/badge/θ-89%2F2462-gold?style=flat-square)]()
+[![Haskell](https://img.shields.io/badge/Haskell-GHC%209.4-5e5086?style=flat-square&logo=haskell)](src/Dsss/Circuit/)
+[![Idris 2](https://img.shields.io/badge/Idris%202-QTT-red?style=flat-square)](src/Dsss/Frontend/)
+[![Futhark](https://img.shields.io/badge/Futhark-GPU%20kernel-blue?style=flat-square)](src/Dsss/Backend/)
+[![Scala](https://img.shields.io/badge/Scala-3.3-dc322f?style=flat-square&logo=scala)](src/Dsss/Zk/ConstraintSolver.scala)
+[![Circom](https://img.shields.io/badge/Circom-2.1.5-00b4d8?style=flat-square)](src/Dsss/Zk/ConstantProductSolver.circom)
 
 Z3 gives up on `x² + y² ≤ 1`. It has no opinion on TypeNat constants in refinement predicates. It produces no proof certificate. DSSS is the solver that finishes the job.
 
@@ -407,12 +412,6 @@ Taylor linearization of trigonometric constraints is incomplete — Lindemann-We
 
 ---
 
-## Specification Documents
-
-- [`spec/ARCHITECTURE.md`](spec/ARCHITECTURE.md) — four-layer stack, unified judgment multi-sorted logic, recursive fixed-point solver with widening, complexity table, known limitations
-- [`spec/LOWERING_SPEC.md`](spec/LOWERING_SPEC.md) — lowering pass contract, width equations per GADT constructor, structural rewrites, SSA graph strata, SGMT policy selection, six invariants
-- [`spec/ZK_QF_NRA_SPEC.md`](spec/ZK_QF_NRA_SPEC.md) — ZK-QF_NRA algorithm, primitive definitions, proof obligations P1–P6, concrete demo trace, novelty status
-
 ---
 
 ## Source Layout
@@ -463,6 +462,35 @@ C³ provides what no external solver dependency can:
 | **Coming from LiquidHaskell** | — | Start here |
 
 → [c3-kernel on GitHub](https://github.com/SNAPKITTYWEST/c3-kernel) · [c3-kernel GitHub Pages](https://snapkittywest.github.io/c3-kernel/)
+
+---
+
+## Documentation
+
+| Guide | Description |
+|---|---|
+| [Getting Started](docs/GETTING_STARTED.md) | Clone, build, generate the ZK witness, open the OpenSCAD polyhedron |
+| [Circuit DSL](docs/CIRCUIT_DSL.md) | Write and compose typed circuits; width errors at compile time; 4-bit ripple carry adder worked example |
+| [ZK Pipeline](docs/ZK_PIPELINE.md) | End-to-end: LH refinement → Circom → R1CS → witness → OpenSCAD |
+| [Solver Policy](docs/SOLVER_POLICY.md) | Write SGMT stylesheets to control solver tactics; `liquid-default.sgmt` annotated line by line |
+
+Formal specifications are in [`spec/`](spec/):
+
+- [`spec/ARCHITECTURE.md`](spec/ARCHITECTURE.md) — four-layer stack, unified judgment, theory complexity
+- [`spec/LOWERING_SPEC.md`](spec/LOWERING_SPEC.md) — lowering pass contract, width equations, six invariants
+- [`spec/ZK_QF_NRA_SPEC.md`](spec/ZK_QF_NRA_SPEC.md) — ZK-QF_NRA algorithm, proof obligations P1–P6
+
+---
+
+## Contributing
+
+See [CONTRIBUTING.md](CONTRIBUTING.md) for dev environment setup, code style guidelines (HLint, Black, Futhark size naming), how to submit a PR, and what kinds of contributions are most needed.
+
+---
+
+## Security
+
+See [SECURITY.md](SECURITY.md) for the vulnerability disclosure policy, response timeline, and what counts as a security issue in DSSS (solver soundness, ZK circuit holes, certificate forgery, side-channel leaks).  Do **not** report security issues via public GitHub Issues.
 
 ---
 
