@@ -1,6 +1,7 @@
 # DSSS — Deterministic Sovereign Solving System
 
 [![License: BSL-1.1](https://img.shields.io/badge/license-BSL--1.1-orange?style=flat-square)](LICENSE)
+[![Contributions: BSD-3-Clause](https://img.shields.io/badge/contributions-BSD--3--Clause-blue?style=flat-square)](LICENSE)
 [![Patent Pending](https://img.shields.io/badge/patent-pending-red?style=flat-square)]()
 [![θ](https://img.shields.io/badge/θ-89%2F2462-gold?style=flat-square)]()
 [![Haskell](https://img.shields.io/badge/Haskell-GHC%209.4-5e5086?style=flat-square&logo=haskell)](src/Dsss/Circuit/)
@@ -498,6 +499,10 @@ See [SECURITY.md](SECURITY.md) for the vulnerability disclosure policy, response
 
 **Copyright © BEL ESPRIT D ACCORD TRUST HOLDINGS INC. All rights reserved.**
 
-Patent pending. The DSSS solver architecture, SGMT stylesheet system, ZK-QF_NRA pipeline, and typed circuit DSL are the subject of a pending patent application. Unauthorized reproduction, distribution, or use for commercial purposes is prohibited without written authorization from the Trust.
+Patent pending. The DSSS solver architecture, SGMT stylesheet system, ZK-QF_NRA pipeline, and typed circuit DSL are the subject of a pending patent application.
 
-Licensed under BSL-1.1. See [LICENSE](LICENSE).
+**Dual licensed:**
+- **BSL-1.1** (primary) — research, evaluation, academic, and open-source use permitted. Commercial production use requires a written agreement with the Licensor. Converts to BSD-3-Clause on 2030-01-01.
+- **BSD-3-Clause** (contributions) — contributions submitted via pull request are accepted under BSD-3-Clause. LiquidHaskell contributors are explicitly welcome; contribution terms are compatible with LiquidHaskell's own BSD-3-Clause license.
+
+See [LICENSE](LICENSE) for full terms.

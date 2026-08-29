@@ -1,10 +1,78 @@
-PROPRIETARY SOFTWARE LICENSE
+DSSS — Deterministic Sovereign Solving System
+Dual License: BSL-1.1 (primary) + BSD-3-Clause (contributions)
+
+================================================================================
+PRIMARY LICENSE: Business Source License 1.1
+================================================================================
 
 Copyright (c) 2026 BEL ESPRIT D ACCORD TRUST HOLDINGS INC
+All rights reserved. Patent Pending.
+
+Parameters:
+  Licensor:             BEL ESPRIT D ACCORD TRUST HOLDINGS INC
+  Licensed Work:        DSSS — Deterministic Sovereign Solving System
+  Change Date:          2030-01-01
+  Change License:       BSD-3-Clause
+
+Use Limitation:
+  The Licensed Work may not be used for production commercial purposes
+  without a separate written agreement with the Licensor.
+
+  "Production commercial purposes" means use of the Licensed Work in a
+  product or service offered to third parties for remuneration.
+
+  Research, evaluation, academic use, open-source projects, and
+  contributions back to this repository are permitted without restriction.
+
+On the Change Date, or four years after the first publicly available
+distribution of a specific version of the Licensed Work, the above use
+limitation no longer applies and the Licensed Work becomes available under
+the Change License (BSD-3-Clause).
+
+For licensing inquiries:
+  BEL ESPRIT D ACCORD TRUST HOLDINGS INC
+
+================================================================================
+SECONDARY LICENSE: BSD-3-Clause (for contributions)
+================================================================================
+
+Contributions submitted to this repository (pull requests, patches, issues
+with code) are accepted under the BSD-3-Clause License:
+
+Copyright (c) 2026 The DSSS Contributors
 All rights reserved.
 
-This software and associated documentation files are the exclusive property
-of BEL ESPRIT D ACCORD TRUST HOLDINGS INC. Unauthorized copying, modification,
-distribution, or use is strictly prohibited without prior written consent.
+Redistribution and use in source and binary forms, with or without
+modification, are permitted provided that the following conditions are met:
 
-Patent Pending.
+1. Redistributions of source code must retain the above copyright notice,
+   this list of conditions and the following disclaimer.
+
+2. Redistributions in binary form must reproduce the above copyright notice,
+   this list of conditions and the following disclaimer in the documentation
+   and/or other materials provided with the distribution.
+
+3. Neither the name of BEL ESPRIT D ACCORD TRUST HOLDINGS INC nor the names
+   of its contributors may be used to endorse or promote products derived
+   from this software without specific prior written permission.
+
+THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS"
+AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE
+IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE
+ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT HOLDER OR CONTRIBUTORS BE
+LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR
+CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF
+SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS
+INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN
+CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE)
+ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE
+POSSIBILITY OF SUCH DAMAGE.
+
+================================================================================
+COMPATIBILITY NOTE
+================================================================================
+
+LiquidHaskell (BSD-3-Clause) contributors are explicitly welcome.
+Contributions from the LiquidHaskell community are accepted under the
+BSD-3-Clause secondary license above and are compatible with LiquidHaskell's
+own license terms.
