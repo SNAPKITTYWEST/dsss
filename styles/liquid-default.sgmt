@@ -1,0 +1,30 @@
+; DSSS Stylesheet: liquid-default
+; Governs solving strategy for LiquidHaskell Horn clause output
+
+(sheet liquid-default
+  (target smtlib2)
+  (logic auto)
+
+  (match (horn-clause :linear-arithmetic true)
+    (pipeline
+      normalize-anf
+      eliminate-let
+      canonicalize-arith
+      congruence-close
+      solve-lia
+      infer-kvars-cegar))
+
+  (match (term :operator "mod")
+    (rewrite (euclidean-mod-normal-form)))
+
+  (match (query :kind unsat)
+    (emit
+      :certificate drat-like
+      :diagnostics concise
+      :counterexample minimized))
+
+  (policy
+    :deterministic true
+    :max-refinement-rounds 32
+    :seed 0
+    :model-minimization lexicographic))
