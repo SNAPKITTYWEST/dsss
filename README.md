@@ -444,6 +444,28 @@ examples/
 
 ---
 
+## Foundation: C³ Kernel
+
+DSSS is the SMT-LIB2 interface layer. The solver core underneath is [**C³ — Calculus of Constrained Constructions**](https://github.com/SNAPKITTYWEST/c3-kernel).
+
+C³ provides what no external solver dependency can:
+
+- **CAD from scratch** — Cylindrical Algebraic Decomposition (Collins 1975), Sturm sequences, Thom encodings, full quantifier elimination over real closed fields
+- **CDCL(T) from scratch** — no Z3, no CVC5, no external SMT dependency in the core
+- **Differentiable constraints** — `∇f(x) = g(x)` as a first-class constraint type via Dex-style AD
+- **Dependent type theory** — `⟨t | C⟩` terms where unsatisfiable constraints are construction errors, not runtime failures
+
+| | C³ | DSSS |
+|---|---|---|
+| **Role** | Type theory + solver foundation | SMT-LIB2 interface + circuit DSL + ZK pipeline |
+| **Entry point** | `⟨t | C⟩` constraint terms | SMT-LIB2 query stream from LiquidHaskell |
+| **Coming from type theory** | Start here | — |
+| **Coming from LiquidHaskell** | — | Start here |
+
+→ [c3-kernel on GitHub](https://github.com/SNAPKITTYWEST/c3-kernel) · [c3-kernel GitHub Pages](https://snapkittywest.github.io/c3-kernel/)
+
+---
+
 ## Legal
 
 **Copyright © BEL ESPRIT D ACCORD TRUST HOLDINGS INC. All rights reserved.**
