@@ -1,5 +1,9 @@
 # DSSS — Deterministic Sovereign Solving System
 
+[![License: BSL-1.1](https://img.shields.io/badge/license-BSL--1.1-orange?style=flat-square)](LICENSE)
+[![Patent Pending](https://img.shields.io/badge/patent-pending-red?style=flat-square)]()
+[![θ](https://img.shields.io/badge/θ-89%2F2462-gold?style=flat-square)]()
+
 Z3 gives up on `x² + y² ≤ 1`. It has no opinion on TypeNat constants in refinement predicates. It produces no proof certificate. DSSS is the solver that finishes the job.
 
 ```mermaid
@@ -48,10 +52,6 @@ graph TD
 ```
 
 ![Demo](examples/demo_2.gif)
-
-[![License: BSL-1.1](https://img.shields.io/badge/license-BSL--1.1-orange?style=flat-square)](LICENSE)
-[![Patent Pending](https://img.shields.io/badge/patent-pending-red?style=flat-square)]()
-[![θ](https://img.shields.io/badge/θ-89%2F2462-gold?style=flat-square)]()
 
 **Author:** Ahmad Ali Parr  
 **Trust:** Bel Esprit D'Accord Irrevocable Trust
