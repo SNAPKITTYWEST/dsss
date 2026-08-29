@@ -2,6 +2,12 @@
 
 **A Z3-drop-in SMT solver with CAD backend, typed circuit DSL, and ZK witness generation.**
 
+## Demos
+
+https://github.com/SNAPKITTYWEST/dsss/raw/master/examples/demo_1.mp4
+
+https://github.com/SNAPKITTYWEST/dsss/raw/master/examples/demo_2.mp4
+
 [![License: BSL-1.1](https://img.shields.io/badge/license-BSL--1.1-orange?style=flat-square)](LICENSE)
 [![Patent Pending](https://img.shields.io/badge/patent-pending-red?style=flat-square)]()
 [![θ](https://img.shields.io/badge/θ-89%2F2462-gold?style=flat-square)]()
