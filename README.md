@@ -2,9 +2,52 @@
 
 Z3 gives up on `x² + y² ≤ 1`. It has no opinion on TypeNat constants in refinement predicates. It produces no proof certificate. DSSS is the solver that finishes the job.
 
-![Demo 1](examples/demo_1.gif)
+```mermaid
+graph TD
+    LH["LiquidHaskell / liquid-fixpoint<br/>SMT-LIB2 query stream"]
 
-![Demo 2](examples/demo_2.gif)
+    subgraph Frontend["Frontend: Idris 2 + QTT"]
+        TN["Type Net<br/>bipartite constraint graph<br/>QTT multiplicities: 0 / 1 / ω"]
+        CAD["Recursive CAD Model<br/>depth-indexed, bounded unfolding"]
+        FUT["Futhark Array Contracts<br/>size params + uniqueness types"]
+    end
+
+    subgraph Middleware["Middleware: Type Net Compiler"]
+        GADT["GADT → Futhark size types"]
+        QTT2["QTT multiplicity analysis<br/>runtime / erased / linear"]
+        CG["Constraint graph → SMT-LIB<br/>+ geometric extensions"]
+    end
+
+    subgraph Core["Solver Core: CDCL(T)"]
+        SAT["SAT Core<br/>2-watched literals · VSIDS · CDCL"]
+        LRA["Theory 1: LRA<br/>Dual Simplex"]
+        NRA["Theory 2: NRA<br/>Single-cell CAD + Gröbner"]
+        TRIG["Theory 3: Trig<br/>Taylor intervals + phase unwrap"]
+        GEOM["Theory 4: Geom<br/>SO(3) / SE(3) propagation"]
+        TYPENET["Theory 5: TypeNet<br/>size graph propagation"]
+    end
+
+    subgraph Backend["Backend: Futhark GPU Kernel"]
+        BATCH["Batch SAT checks<br/>on GPU arrays"]
+        INPLACE["In-place constraint buffer<br/>uniqueness types — no copy"]
+        UNFOLD["Recursive model unfolding<br/>bounded depth"]
+    end
+
+    subgraph ZK["ZK Pipeline"]
+        CIRCOM["Circom circuit<br/>DEX AMM invariant x·y=k"]
+        R1CS["R1CS + witness calculator"]
+        SCAD["OpenSCAD polyhedron<br/>trigonometric CAD sweep"]
+    end
+
+    LH --> Frontend
+    Frontend --> Middleware
+    Middleware --> Core
+    Core --> Backend
+    Core --> ZK
+    CIRCOM --> R1CS --> SCAD
+```
+
+![Demo](examples/demo_2.gif)
 
 [![License: BSL-1.1](https://img.shields.io/badge/license-BSL--1.1-orange?style=flat-square)](LICENSE)
 [![Patent Pending](https://img.shields.io/badge/patent-pending-red?style=flat-square)]()
