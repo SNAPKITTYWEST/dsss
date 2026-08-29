@@ -4,9 +4,9 @@
 
 ## Demos
 
-https://github.com/SNAPKITTYWEST/dsss/raw/master/examples/demo_1.mp4
+![Demo 1](examples/demo_1.gif)
 
-https://github.com/SNAPKITTYWEST/dsss/raw/master/examples/demo_2.mp4
+![Demo 2](examples/demo_2.gif)
 
 [![License: BSL-1.1](https://img.shields.io/badge/license-BSL--1.1-orange?style=flat-square)](LICENSE)
 [![Patent Pending](https://img.shields.io/badge/patent-pending-red?style=flat-square)]()
